@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex"> 
+    <link rel="stylesheet" href="style.css">
     <title>E. Alex McIntire</title>
 </head>
 <body>
@@ -40,14 +41,14 @@
                     composed of a status (common HTTP status codes include: 200 (success!), 400, 403, and 404), 
                     a request header (containing the <strong>URL</strong>, request method, <strong>HTTP</strong> status code, IP address, and
                     policy), a response header (containing cache details, date, content type, the date), and
-                    the body (the information reuqested from the <strong>server</strong>). When <strong>a file is stored locally, and being sent to
+                    the body (the information requested from the <strong>server</strong>). When <strong>a file is stored locally, and being sent to
                     the server</strong> in a <strong>POST or PUT request</strong>, the file's details can be viewed in the Network Tab's 
                     "Payload" subcategory. However, when <strong>the information is being sent from the (remote) server to 
                     the (local) client</strong> as a part of a <strong>GET request</strong>, the file's details can be viewed in the 
                     Network Tab's "Response" subcategory.
                 </p>
                 <p> 
-                    When viewed in the Network tab, favicon.ico file has <strong>a status 200; this indicates to the user that the brower has
+                    When viewed in the Network tab, favicon.ico file has <strong>a status 200; this indicates to the user that the browser has
                     issued a GET request for this resource, and the resource has been returned successfully</strong>.
                     However, main.css and main.js files do not display 200 on the Network tab (at present, they display nothing). 
                     There is no data on the Network tab for these resources because they have not yet been created. The only network traffic to be seen 
@@ -131,7 +132,7 @@
     </main>
 
     <footer>
-        © 2023 E. Alex McIntire
+        <p>© 2023 E. Alex McIntire</p>
     </footer>
 
 </body>
