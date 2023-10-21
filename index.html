@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"> 
+    <title>E. Alex McIntire</title>
+</head>
+<body>
+
+    <header>
+        <h1>E. Alex McIntire</h1>
+    </header>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Web Dev Concepts</h2>
+
+            <article>
+                <h3>Web Servers</h3>
+                <p>
+                    The file <strong>index.html</strong>, as it relates to websites and servers, 
+                    <strong>is the name of the resource generally served when a user requests the root
+                    path of a website</strong>. In most cases--the Apache server at access.engr.oregonstate.edu among them--
+                     the root directory ("/") is mapped to index.html. Another name for index.html is the "designated homepage,"
+                    served to clients when a GET request is made to the root path of website in question.
+                </p>
+                <p>
+                    As <strong>HTTP requests are how clients and servers communicate across the web</strong>,
+                    the ability to inspect this network traffic is a vital part of a web developer's toolkit. 
+                    Its functionality is available in most modern browsers; in Chrome, it can be found
+                    by pressing Function+F12 (to open DevTools), and then clicking Network. This opens
+                    the Network tab, where network traffic--information being sent between the client
+                    and the <strong>server</strong>--can be inspected. This communication between the client and the server is 
+                    composed of a status (common HTTP status codes include: 200 (success!), 400, 403, and 404), 
+                    a request header (containing the <strong>URL</strong>, request method, <strong>HTTP</strong> status code, IP address, and
+                    policy), a response header (containing cache details, date, content type, the date), and
+                    the body (the information reuqested from the <strong>server</strong>). When <strong>a file is stored locally, and being sent to
+                    the server</strong> in a <strong>POST or PUT request</strong>, the file's details can be viewed in the Network Tab's 
+                    "Payload" subcategory. However, when <strong>the information is being sent from the (remote) server to 
+                    the (local) client</strong> as a part of a <strong>GET request</strong>, the file's details can be viewed in the 
+                    Network Tab's "Response" subcategory.
+                </p>
+                <p> 
+                    When viewed in the Network tab, favicon.ico file has <strong>a status 200; this indicates to the user that the brower has
+                    issued a GET request for this resource, and the resource has been returned successfully</strong>.
+                    However, main.css and main.js files do not display 200 on the Network tab (at present, they display nothing). 
+                    There is no data on the Network tab for these resources because they have not yet been created. The only network traffic to be seen 
+                     is two successful GET requests for favicon.ico and index.html.
+                </p>
+                <p>
+                    It is important to note that the <strong>URL</strong> to this file contains four parts:
+                    the scheme, the host domain, the subdomain, and the resource(s). <strong>The scheme
+                    is the protocol the client must use to access this resource</strong> (the protocol for all files on
+                    web.engr.oregonstate.edu are secure HyperText Transfer Protocol). The host domain
+                    for this site is oregonstate.edu. The subdomain is "web.engr." and
+                    the resources are index.html and favicon.ico.
+                </p>
+            </article>
+
+            <article>
+                <h3>Frontend Design</h3>
+                <p>
+                    <strong>"Frontend design" is a combination of the UI (user interface) and the UX (user experience)</strong>--in short,
+                    how the site looks and feels from a user's perspective. While the UI is focused on the visual design
+                    of the site and the UX is more concerned with usability (how well the user can achieve their goals),
+                    both form and function are necessary to create a site that users will return to. To ensure a website
+                    is usable, keep these principles in mind: <strong>The 5 "E's" of Usability</strong>. Is a website...
+                </p>
+
+                <dl>
+                    <dt><strong>Effective</strong></dt>    
+                    <dd>at helping users accomplish their goal or purpose?
+                    </dd>
+                    <dt><strong>Efficient</strong></dt>
+                    <dd>at enabling users to accomplish their mission with a minimum amount of time and frustration?
+                    </dd>
+                    <dt><strong>Easy-to-navigate</strong></dt>
+                    <dd>for both first-time and returning users? 
+                    </dd>
+                    <dt><strong>Error-free</strong></dt>
+                    <dd>from both a technical and goal-oriented perspective? What happens to users when they run into errors,
+                        and can these errors be recovered from?
+                    </dd>
+                    <dt><strong>Engaging</strong></dt>
+                    <dd>enjoyable, and appropriate for its intended audience?
+                    </dd>
+                </dl>
+
+                <p>
+                    Coming to the aid of the frontend developer, looking to make a more 
+                    structured, organized, and easily-navigable website, are <strong>page layout tags</strong>.
+                    While they can function similarly to divs, as containers for different 
+                    components and content areas, page layout tags <strong>are different from divs in a crucial way;
+                    they allow screen readers and search engines to better understand the structure
+                    and purpose of the various areas of a website.</strong> These tags include: <strong>header (containing items
+                    such as a title, publisher, and slogan--similar to a newspaper masthead)</strong>,
+                    <strong>nav (a block of links, allowing the user to external sites, other pages of the current site, or content further down the page)</strong>, 
+                    <strong>main (the site's primary content)</strong>, <strong>section (a group of content
+                        with a similar purpose or theme)</strong>, <strong>article (a single, specific topic)</strong>, 
+                    <strong>aside (content related to an article)</strong>, 
+                    and <strong>footer (appears below the main tag, can contain copyright, contact information,
+                        and (frequently) links to lesser-used pages)</strong>.
+                </p>
+                <p>
+                    While these page layout tags provide structure to a single page of a website,
+                    <strong>tools within the nav bar--anchors--create hyperlinks which connect a 
+                        website to external content, internal content, and from page to page.</strong>
+                </p>
+                <ol>
+                    <li><strong>External content: connects a website to content outside the current site</strong>. The 
+                        href="" inside of external content anchor links to external sites, such as href="oregonstate.edu"
+                    </li>
+                    <li><strong>Internal content: connects a user to content on the current page</strong>. The
+                        href="" inside of internal content anchors will contain #ids of individual elements on the DOM tree,
+                        such as href="#travelGallery"
+                    </li>
+                    <li><strong>From page to page: connects a user to other pages of the same website</strong>. The href="" inside 
+                        these links can contain either absolute or relative paths. An example of a relative path 
+                        to a website within the current directory is href="./photos.html"
+                    </li>
+                  </ol>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        © 2023 E. Alex McIntire
+    </footer>
+
+</body>
+</html>
+
